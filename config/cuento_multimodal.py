@@ -122,7 +122,7 @@ class App(ttk.Frame):
         ttk.Label(self, text="Tema del cuento:").grid(row=0, column=0, sticky="w", pady=2)
         ttk.Entry(self, textvariable=self.var_tema).grid(row=0, column=1, columnspan=3, sticky="ew", padx=6, pady=2)
 
-        ttk.Label(self, text="Curso (1–8):").grid(row=1, column=0, sticky="w", pady=2)
+        ttk.Label(self, text="Curso (1–4):").grid(row=1, column=0, sticky="w", pady=2)
         ttk.Entry(self, width=6, textvariable=self.var_grado).grid(row=1, column=1, sticky="w", padx=6, pady=2)
 
         ttk.Label(self, text="Modelo texto:").grid(row=2, column=0, sticky="w", pady=2)

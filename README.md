@@ -21,10 +21,13 @@ source venv/bin/activate  # en Linux/Mac
 ```
 
 ### 2. Instalar librerías necesarias  
-```bash
-pip install openai python-dotenv colorama pillow tk
-```
+## 📦 requirements.txt  
 
+Si quieres instalar en otro PC puedes realizar la instalacion de dependencias con el archivo requirements.txt, solo debes ejecutar el siguiente codigo:  
+
+```bash
+pip install -r requirements.txt
+```
 ---
 
 ## ⚙️ Configuración  
@@ -41,27 +44,17 @@ echo "OPENAI_API_KEY=sk-xxxxxx_tu_api_key_aqui" > .env
 
 2. Verifica que funciona probando en consola:  
 ```bash
-py -m config.main
+python -m config.main
 ```
 
 ---
 
 ## ▶️ Ejecución  
 
-### 1. Desde consola (modo script)  
-Generar un cuento completo (texto + imagen + audio):  
-```bash
-py -m config.cuento_multimodal --tema "La amistad" --grado 3
-```
-
-Los archivos se guardarán en `outputs/` con **timestamp** (ej: `cuento_20250822_213500.txt`).  
-
----
-
-### 2. Desde GUI (modo gráfico con Tkinter)  
+### 1. Desde GUI (modo gráfico con Tkinter)  
 Ejecuta:  
 ```bash
-py -m apps.gui_cuento_multimodal
+python -m config.cuento_multimodal
 ```
 
 La ventana permite elegir:  
@@ -80,67 +73,17 @@ Proyecto_01/
 │── config/
 │   ├── settings.py          # Configuración API y cliente OpenAI
 │   ├── main.py              # Chat simple de prueba
-│   ├── cuento_multimodal.py # Script consola (texto+imagen+audio)
-│── apps/
-│   ├── gui_cuento_multimodal.py # Interfaz gráfica Tkinter
+│   ├── cuento_multimodal.py # Gui con tkinter (texto+imagen+audio)
 │── outputs/                 # Carpeta de resultados generados
 │── .env                     # Clave de API (NO subir a GitHub)
 │── requirements.txt         # Dependencias
 ```
-
----
-
-## 📦 requirements.txt  
-
-Si quieres instalar en otro PC, crea este archivo:  
-
-```aiohappyeyeballs==2.6.1
-aiohttp==3.12.15
-aiosignal==1.4.0
-annotated-types==0.7.0
-anyio==4.10.0
-attrs==25.3.0
-certifi==2025.1.31
-charset-normalizer==3.4.1
-colorama==0.4.6
-distro==1.9.0
-frozenlist==1.7.0
-h11==0.16.0
-httpcore==1.0.9
-httpx==0.28.1
-idna==3.10
-jiter==0.10.0
-multidict==6.6.3
-openai==0.28.0
-pdfkit==1.0.0
-propcache==0.3.2
-pydantic==2.11.7
-pydantic_core==2.33.2
-PyQt5==5.15.11
-PyQt5-Qt5==5.15.2
-PyQt5_sip==12.17.0
-python-dotenv==1.1.1
-python-vlc==3.0.21203
-requests==2.32.3
-sniffio==1.3.1
-tqdm==4.67.1
-typing-inspection==0.4.1
-typing_extensions==4.14.1
-urllib3==2.3.0
-yarl==1.20.1
-```
-
-Y ejecuta:  
-```bash
-pip install -r requirements.txt
-```
-
 ---
 
 ## ✨ Ejemplo de uso  
 
 ```bash
-py -m config.cuento_multimodal 
+python -m config.cuento_multimodal 
 ```
 
 📂 Salida:  
