@@ -16,8 +16,9 @@ Incluye:
 - Crear entorno virtual:  
 ```bash
 py -m venv venv
-.\venv\Scripts\activate   # en Windows
-source venv/bin/activate  # en Linux/Mac
+.\venv\Scripts\activate.bat   # En Windows CMD
+.\venv\Scripts\activate.ps    # En windows powershell
+source venv/bin/activate      # En Linux/Mac
 ```
 
 ### 2. Instalar librerías necesarias  
@@ -44,7 +45,7 @@ echo "OPENAI_API_KEY=sk-xxxxxx_tu_api_key_aqui" > .env
 
 2. Verifica que funciona probando en consola:  
 ```bash
-python -m config.main
+python -m config.cuento_multimodal
 ```
 
 ---
@@ -57,7 +58,7 @@ Ejecuta:
 python -m config.cuento_multimodal
 ```
 
-La ventana permite elegir:  
+El programa abre una ventana que permite elegir:  
 - Tema del cuento  
 - Curso (1° a 4° básico)  
 - Modelo de texto y voz  
@@ -71,8 +72,8 @@ La ventana permite elegir:
 ```
 Proyecto_01/
 │── config/
+│   ├── __init__.py 
 │   ├── settings.py          # Configuración API y cliente OpenAI
-│   ├── main.py              # Chat simple de prueba
 │   ├── cuento_multimodal.py # Gui con tkinter (texto+imagen+audio)
 │── outputs/                 # Carpeta de resultados generados
 │── .env                     # Clave de API (NO subir a GitHub)
